@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SC 1.1.1 Non-text Content</title>
+</head>
+<body>
+
+<h1>SC 1.1.1 Passed examples</h1>
+  
+  <h2>Passed example 1</h2>
+
+    <p><img src="Informative_image.jpg" alt="The information on this image"></p>
+  
+<h1>SC 1.1.1 Failed examples</h1>
+  
+  <H2>Failed example 1</h2>
+  
+    <p><img src="Informative_image.jpg"></p>
+  
+<h1>SC 1.1.1 Unclear examples</h1>
+  
+  <H2>Unclear example 1</h2>
+  
+    <p>Currently this SC has no unclear examples. Are you somebody that performs WCAG audits and are you unclear on whether or not to pass or fail a particular example sitaution? Become a contributer to our Repository and add the example!</p>
+  
+</body>
+</html>
