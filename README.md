@@ -1,4 +1,4 @@
-# WCAG_Audit_Examples
+# WCAG Audit Examples
 This is a repository that will hopefully be filled with examples of situation that either pass or fail specific WCAG SC. It will also house examples about which there is no clear consensus wether or not they pass or fail WCAG. It can house many forms of examples, not just HTML examples. For example, currently WCAG is also used to see if mobile apps comply to WCAG. This repository could house screenshots or even descriptions of situations that would either pass or fail WCAG.
 
 # current status of this repository
