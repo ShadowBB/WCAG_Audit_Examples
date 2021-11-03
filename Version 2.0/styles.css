@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.index {
+    width: 30%;
+    background: #ffcccc;
+}
+
+.content {
+    width: 70%;
+    background: #7158e2;
+}
