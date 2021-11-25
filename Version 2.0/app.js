@@ -20,13 +20,14 @@ const data = [
 
             passed: [
                 {
-                    description: '1.1.1 passed example'
+                    description: '1.1.1 passed example',
+                    img: 'awdwada',
                 },
             ],
 
             unclear: [
                 {
-                    description: ''
+                    description: 'Op deze pagina is dit niet duidelijk.... *link*'
                 },
             ]
         }
@@ -73,15 +74,30 @@ const navigationButton = document.querySelectorAll('.js-context-toggle');
 const passedExample = document.querySelectorAll('.passed-example');
 const failedExample = document.querySelectorAll('.failed-example');
 const criterionName = document.querySelector('.criterion-name');
+const passedList = document.querySelector('.passed-list');
+const failedList = document.querySelector('.failed-list');
+const unclearList = document.querySelector('.unclear-list');
 
 // change content
+
+const renderExampleList = (list, listData) => {
+    list.innerHTML = '';
+        listData.forEach(item => {
+            const listElement = document.createElement('li');
+            listElement.innerHTML = item.description;
+            list.append(listElement);
+        })
+}
+
 
 navigationButton.forEach(button => {
     button.addEventListener('click', () => {
         let index = button.parentElement.dataset.chapter;
+        
+        renderExampleList(passedList, data[index].examples.passed)
+        renderExampleList(failedList, data[index].examples.failed)
+        renderExampleList(passedList, data[index].examples.unclear)
 
-        console.log(failedExample)
-        console.log(passedExample[0]);
         passedExample[0].innerHTML = data[index].examples.passed[0].description;
         criterionName.innerHTML = data[index].title;
 
