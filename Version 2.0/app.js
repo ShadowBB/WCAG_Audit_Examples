@@ -1,6 +1,6 @@
-// define list element
+// const list = document.querySelector('.criterium-list');
 
-const list = document.querySelector('.criterium-list');
+const test = 'dgogwater';
 
 // WCAG data
 
@@ -58,48 +58,48 @@ const data = [
 
 // dynamically generated list based on data
 
-const renderList = data.map((listItem, index) => {
-    const listElement = document.createElement('li');
-    listElement.dataset.chapter = index;
-    const button = document.createElement('button');
-    button.classList.add('js-context-toggle');
-    button.innerHTML = listItem.title;
-    listElement.append(button)
-    list.append(listElement);
-});
+// const renderList = data.map((listItem, index) => {
+//     const listElement = document.createElement('li');
+//     listElement.dataset.chapter = index;
+//     const button = document.createElement('button');
+//     button.classList.add('js-context-toggle');
+//     button.innerHTML = listItem.title;
+//     listElement.append(button)
+//     list.append(listElement);
+// });
 
-// hooks
+// // hooks
 
-const navigationButton = document.querySelectorAll('.js-context-toggle');
-const passedExample = document.querySelectorAll('.passed-example');
-const failedExample = document.querySelectorAll('.failed-example');
-const criterionName = document.querySelector('.criterion-name');
-const passedList = document.querySelector('.passed-list');
-const failedList = document.querySelector('.failed-list');
-const unclearList = document.querySelector('.unclear-list');
+// const navigationButton = document.querySelectorAll('.js-context-toggle');
+// const passedExample = document.querySelectorAll('.passed-example');
+// const failedExample = document.querySelectorAll('.failed-example');
+// const criterionName = document.querySelector('.criterion-name');
+// const passedList = document.querySelector('.passed-list');
+// const failedList = document.querySelector('.failed-list');
+// const unclearList = document.querySelector('.unclear-list');
 
-// change content
+// // change content
 
-const renderExampleList = (list, listData) => {
-    list.innerHTML = '';
-        listData.forEach(item => {
-            const listElement = document.createElement('li');
-            listElement.innerHTML = item.description;
-            list.append(listElement);
-        })
-}
+// const renderExampleList = (list, listData) => {
+//     list.innerHTML = '';
+//         listData.forEach(item => {
+//             const listElement = document.createElement('li');
+//             listElement.innerHTML = item.description;
+//             list.append(listElement);
+//         })
+// }
 
 
-navigationButton.forEach(button => {
-    button.addEventListener('click', () => {
-        let index = button.parentElement.dataset.chapter;
+// navigationButton.forEach(button => {
+//     button.addEventListener('click', () => {
+//         let index = button.parentElement.dataset.chapter;
         
-        renderExampleList(passedList, data[index].examples.passed)
-        renderExampleList(failedList, data[index].examples.failed)
-        renderExampleList(passedList, data[index].examples.unclear)
+//         renderExampleList(passedList, data[index].examples.passed)
+//         renderExampleList(failedList, data[index].examples.failed)
+//         renderExampleList(passedList, data[index].examples.unclear)
 
-        passedExample[0].innerHTML = data[index].examples.passed[0].description;
-        criterionName.innerHTML = data[index].title;
+//         passedExample[0].innerHTML = data[index].examples.passed[0].description;
+//         criterionName.innerHTML = data[index].title;
 
-    })
-})
+//     })
+// })
