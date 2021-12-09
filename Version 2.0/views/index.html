@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>{{title}}</title>
+</head>
+<body>
+  <div class="container">
+    <div class="index">
+      <ul class="criterium-list">
+        <li></li>
+      </ul>
+    </div>
+  <div class="content">
+    <h1 class="criterion-name">1.1.1</h1>
+
+    <h1>Passed examples</h1>
+    <ul class="passed-list">
+      <li>
+        <h2 class="passed-example"></h2>
+          {% for passedExample in passedExamples %}
+            <p>{{passedExample}}</p>
+          {% endfor %}
+      </li>
+    </ul>
+  
+    
+    <h1>Failed examples</h1>
+    <ul class="failed-list">
+      <li>
+        <h2 class="failed-example"></h2>
+          {% for failedExample in failedExamples %}
+            <p>{{failedExample}}</p>
+          {% endfor %}
+      </li>
+    </ul>
+    
+    <h2 class="failed-example">Failed example 1</h2>
+    
+      <p><img src="Informative_image.jpg"></p>
+    
+    <h1>Unclear examples</h1>
+    <ul class="unclear-list">
+      <li>
+        <h2 class="unclear-example"></h2>
+          {% for unclearExample in unclearExamples %}
+            <p>{{unclearExample}}</p>
+          {% endfor %}
+      </li>
+    </ul>
+    
+    <h2 class="unclear-example">Unclear example 1</h2>
+    
+      <p>Currently this SC has no unclear examples. Are you somebody that performs WCAG audits and are you unclear on whether or not to pass or fail a particular example sitaution? Become a contributer to our Repository and add the example!</p>
+
+  </div>
+ </div>
+
+
+
+
+
+
+
+
+</body>
+</html>
