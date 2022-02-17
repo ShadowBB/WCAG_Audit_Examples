@@ -12,7 +12,6 @@ const data = [
             passed: [
                 {
                     description: '1.1.1 passed example',
-                    img: 'awdwada',
                 },
             ],
 
@@ -66,7 +65,6 @@ const data = [
             passed: [
                 {
                     description: '1.2.2 passed example',
-                    img: 'awdwada',
                 },
             ],
 
@@ -98,7 +96,6 @@ const data = [
             passed: [
                 {
                     description: '1.2.3 passed example',
-                    img: 'awdwada',
                 },
             ],
 
@@ -130,7 +127,6 @@ const data = [
             passed: [
                 {
                     description: '1.2.4 passed example',
-                    img: 'awdwada',
                 },
             ],
 
@@ -140,9 +136,6 @@ const data = [
                 },
                 {
                     description: 'Op deze pagina is dit niet duidelijk.... *link*'
-                },
-                {
-                    description: '<pre><code><img src="afbeelding.jpg" alt="hond"></code></pre>'
                 },
             ]
         }
@@ -162,7 +155,6 @@ const data = [
             passed: [
                 {
                     description: '1.2.5 passed example',
-                    img: 'awdwada',
                 },
             ],
 
@@ -184,23 +176,19 @@ const data = [
         examples: {
             failed: [
                 {
-                    description: 'This image has no text alternative'
-                },
-                {
-                    description: 'Usage of title is not allowed',
+                    description: 'A visual heading on a HTML page, is not denoted with a heading element such as a h2 element for more information, please check the following <a href="www.google.com">link</a>',
                 },
             ],
 
             passed: [
                 {
                     description: '1.3.1 passed example',
-                    img: 'awdwada',
                 },
             ],
 
             unclear: [
                 {
-                    description: '<code>test</code>'
+                    description: ''
                 },
                 {
                     description: 'Op deze pagina is dit niet duidelijk.... *link*'
@@ -226,7 +214,6 @@ const data = [
             passed: [
                 {
                     description: '1.3.2 passed example',
-                    img: 'awdwada',
                 },
             ],
 
@@ -258,7 +245,6 @@ const data = [
             passed: [
                 {
                     description: '1.3.3 passed example',
-                    img: 'awdwada',
                 },
             ],
 
@@ -290,7 +276,6 @@ const data = [
             passed: [
                 {
                     description: '1.3.4 passed example',
-                    img: 'awdwada',
                 },
             ],
 
@@ -322,7 +307,6 @@ const data = [
             passed: [
                 {
                     description: '1.3.5 passed example',
-                    img: 'awdwada',
                 },
             ],
 
