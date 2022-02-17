@@ -4,57 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <title>{{title}}</title>
 </head>
 <body>
   <div class="container">
     <div class="index">
+      <h1>Inhoudsopgave</h1>
       <ul class="criterium-list">
-        <li></li>
+          {% for criterionName in criterionNames %}
+
+            <li><a href="{{criterionName + '.html'}}">{{criterionName}}</a></li>
+            
+          {% endfor %}
       </ul>
     </div>
   <div class="content">
-    <h1 class="criterion-name">1.1.1</h1>
 
-    <h1>Passed examples</h1>
-    <ul class="passed-list">
-      <li>
-        <h2 class="passed-example"></h2>
+    <h1 class="criterion-name">{{title}}</h1>
+
+    <h2>Passed examples</h2>
+      <ul class="passed-list">
           {% for passedExample in passedExamples %}
-            <p>{{passedExample}}</p>
+
+              {% if passedExample != 0 %}
+                <li>{{passedExample}}</li>
+              {% endif %}
+
+              {% if passedExample == 0 %}
+                <li>Currently this SC has no passed examples. Are you somebody that performs WCAG audits and are you unclear on whether or not to pass or fail a particular example sitaution? Become a contributor to our Repository and add the example!</li>
+              {% endif %}
+          
           {% endfor %}
-      </li>
-    </ul>
+      </ul>
   
     
-    <h1>Failed examples</h1>
-    <ul class="failed-list">
-      <li>
-        <h2 class="failed-example"></h2>
+    <h2>Failed examples</h2>
+      <ul class="failed-list">
           {% for failedExample in failedExamples %}
-            <p>{{failedExample}}</p>
+
+              {% if failedExample != 0 %}
+                <li>{{failedExample}}</li>
+              {% endif %}
+
+              {% if failedExample == 0 %}
+                <li>Currently this SC has no failed examples. Are you somebody that performs WCAG audits and are you unclear on whether or not to pass or fail a particular example sitaution? Become a contributor to our Repository and add the example!</li>
+              {% endif %}
+
           {% endfor %}
-      </li>
-    </ul>
-    
-    <h2 class="failed-example">Failed example 1</h2>
-    
-      <p><img src="Informative_image.jpg"></p>
-    
-    <h1>Unclear examples</h1>
-    <ul class="unclear-list">
-      <li>
-        <h2 class="unclear-example"></h2>
+      </ul>
+     
+    <h2>Unclear examples</h2>
+      <ul class="unclear-list">
           {% for unclearExample in unclearExamples %}
-            <p>{{unclearExample}}</p>
+
+              {% if unclearExample != 0 %}
+                <li>{{unclearExample}}</li>
+              {% endif %}
+
+              {% if unclearExample == 0 %}
+                <li>Currently this SC has no unclear examples. Are you somebody that performs WCAG audits and are you unclear on whether or not to pass or fail a particular example sitaution? Become a contributor to our Repository and add the example!</li>
+              {% endif %}
+
           {% endfor %}
-      </li>
-    </ul>
-    
-    <h2 class="unclear-example">Unclear example 1</h2>
-    
-      <p>Currently this SC has no unclear examples. Are you somebody that performs WCAG audits and are you unclear on whether or not to pass or fail a particular example sitaution? Become a contributer to our Repository and add the example!</p>
+      </div>
+
+
+
 
   </div>
  </div>
