@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+html, body, p {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.index {
+    width: 20%;
+    padding: 50px;
+    border-right: 2px solid #eaeaea;
+}
+
+.content {
+    width: 80%;
+    padding: 50px;
+    /* margin-right: 20%; */
+}
